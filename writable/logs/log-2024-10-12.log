@@ -1,0 +1,112 @@
+ERROR - 2024-10-12 12:48:36 --> mysqli_sql_exception: Column 'table_id' cannot be null in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(55): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+ERROR - 2024-10-12 12:48:36 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eatnow`.`order_menuitem`, CONSTRAINT `order_menuitem_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(76): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+ERROR - 2024-10-12 12:48:42 --> mysqli_sql_exception: Column 'table_id' cannot be null in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(55): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+ERROR - 2024-10-12 12:48:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eatnow`.`order_menuitem`, CONSTRAINT `order_menuitem_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(76): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+ERROR - 2024-10-12 13:44:51 --> mysqli_sql_exception: Column 'table_id' cannot be null in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(55): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+ERROR - 2024-10-12 13:44:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`eatnow`.`order_menuitem`, CONSTRAINT `order_menuitem_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/eatnow/vendor/codeigniter4/framework/system/BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 /var/www/eatnow/vendor/codeigniter4/framework/system/Model.php(791): CodeIgniter\BaseModel->insert()
+#7 /var/www/eatnow/app/Controllers/OrderController.php(76): CodeIgniter\Model->insert()
+#8 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\OrderController->addToCart()
+#9 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /var/www/eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2024-10-12 13:47:26 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: ";stok="
+[Method: GET, Route: cgi-bin/luci/;stok=/locale]
+in SYSTEMPATH/Router/Router.php on line 736.
+ 1 SYSTEMPATH/Router/Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

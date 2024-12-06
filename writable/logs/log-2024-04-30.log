@@ -1,0 +1,1849 @@
+ERROR - 2024-04-30 00:40:29 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems('1')
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems('1')
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:40:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems('1')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:41:23 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:41:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:46:00 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:46:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:46:41 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:46:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:46:43 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:46:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:47:19 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:47:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 00:49:57 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 00:50:01 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 00:50:21 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 00:50:23 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 00:51:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/.php"
+[Method: GET, Route: admin/]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/', [], true)
+ 3 APPPATH/Controllers/AdminController.php(29): view('admin/')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:53:00 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:53:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:53:20 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:53:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:53:22 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:53:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:53:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:53:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:54:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:54:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:57:10 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:57:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:57:12 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:57:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:57:26 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:57:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:59:33 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:59:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:59:42 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:59:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 00:59:49 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 00:59:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 01:03:54 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:187
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(187): mysqli->real_connect('localhost', 'root', 'Marsk327', 'eatnow', 3306, '', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/macbookpro/Eatnow/app/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#13 {main}
+CRITICAL - 2024-04-30 01:03:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Database/BaseConnection.php on line 457.
+ 1 SYSTEMPATH/Database/BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menuitems`', [], false)
+ 3 SYSTEMPATH/Model.php(275): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminController.php(49): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:04:11 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:04:13 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item/]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:10:20 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item/]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:10:22 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:11:55 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item/]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:12:03 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:12:43 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:15:17 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:15:50 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 01:23:28 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 02:01:20 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 02:01:23 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 02:02:10 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 02:55:33 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 02:55:35 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:16:35 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:25:01 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:25:26 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:25:29 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:25:35 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:27:28 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:29:22 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:47:40 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:47:41 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:47:42 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:47:44 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:47:48 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:48:34 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:48:35 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:48:35 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:48:35 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:49:20 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:49:28 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:50:19 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:50:34 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:50:36 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:50:40 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:50:40 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin]
+in SYSTEMPATH/Filters/Filters.php on line 495.
+ 1 SYSTEMPATH/Filters/Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH/Filters/Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:52:00 --> ErrorException: Undefined variable $dish
+[Method: GET, Route: admin/edit_item]
+in APPPATH/Views/EditItem.php on line 10.
+ 1 APPPATH/Views/EditItem.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dish', '/Users/macbookpro/Eatnow/app/Views/EditItem.php', 10)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/EditItem.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('EditItem', [], true)
+ 5 APPPATH/Controllers/AdminController.php(50): view('EditItem', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:52:29 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 03:57:48 --> ErrorException: Undefined variable $menuItems
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItems', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:00:15 --> ErrorException: Undefined variable $menuItem
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 33.
+ 1 APPPATH/Views/admin.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItem', '/Users/macbookpro/Eatnow/app/Views/admin.php', 33)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:57:49 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 60.
+ 1 APPPATH/Views/admin.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 60)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:57:50 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 60.
+ 1 APPPATH/Views/admin.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 60)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:57:50 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 60.
+ 1 APPPATH/Views/admin.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 60)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:57:51 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 60.
+ 1 APPPATH/Views/admin.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 60)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:58:52 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 61.
+ 1 APPPATH/Views/admin.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 61)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 04:59:14 --> ErrorException: Undefined property: CodeIgniter\View\View::$db
+[Method: GET, Route: admin]
+in APPPATH/Views/admin.php on line 61.
+ 1 APPPATH/Views/admin.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$db', '/Users/macbookpro/Eatnow/app/Views/admin.php', 61)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/admin.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('/admin', [], true)
+ 5 APPPATH/Controllers/AdminController.php(29): view('/admin')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:08:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/EditItem.php"
+[Method: GET, Route: admin/edit_item]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/EditItem.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/EditItem', [], true)
+ 3 APPPATH/Controllers/AdminController.php(52): view('admin/EditItem', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:08:50 --> ErrorException: Undefined variable $menuItem
+[Method: GET, Route: admin/edit_item]
+in APPPATH/Views/EditItem.php on line 10.
+ 1 APPPATH/Views/EditItem.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuItem', '/Users/macbookpro/Eatnow/app/Views/EditItem.php', 10)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/EditItem.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('EditItem', [], true)
+ 5 APPPATH/Controllers/AdminController.php(52): view('EditItem', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:11:34 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin/edit_item]
+in APPPATH/Views/EditItem.php on line 10.
+ 1 APPPATH/Views/EditItem.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/Users/macbookpro/Eatnow/app/Views/EditItem.php', 10)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/macbookpro/Eatnow/app/Views/EditItem.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('EditItem', [], true)
+ 5 APPPATH/Controllers/AdminController.php(52): view('EditItem', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:16:18 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/edit_item]
+in APPPATH/Controllers/AdminController.php on line 51.
+ 1 APPPATH/Controllers/AdminController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/macbookpro/Eatnow/app/Controllers/AdminController.php', 51)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->menuItems()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:16:39 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin]
+in APPPATH/Controllers/AdminController.php on line 30.
+ 1 APPPATH/Controllers/AdminController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/macbookpro/Eatnow/app/Controllers/AdminController.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 06:16:49 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin]
+in APPPATH/Controllers/AdminController.php on line 30.
+ 1 APPPATH/Controllers/AdminController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/macbookpro/Eatnow/app/Controllers/AdminController.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 08:08:38 --> mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY' in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `me...', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 /Users/macbookpro/Eatnow/app/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#12 {main}
+CRITICAL - 2024-04-30 08:08:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+[Method: GET, Route: test-database]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 2 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 4 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:38 --> [Caused by] mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 5 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 08:08:39 --> mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY' in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `me...', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 /Users/macbookpro/Eatnow/app/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#12 {main}
+CRITICAL - 2024-04-30 08:08:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+[Method: GET, Route: test-database]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 2 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 4 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:39 --> [Caused by] mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 5 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+ERROR - 2024-04-30 08:08:44 --> mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY' in /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `me...', 0)
+#1 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 /Users/macbookpro/Eatnow/app/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+#6 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+#7 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Users/macbookpro/Eatnow/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 /Users/macbookpro/Eatnow/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(49): require_once('/Users/macbookp...')
+#12 {main}
+CRITICAL - 2024-04-30 08:08:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+[Method: GET, Route: test-database]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 2 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 4 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 08:08:44 --> [Caused by] mysqli_sql_exception: Duplicate entry '5' for key 'menuitems.PRIMARY'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (\'5\', \'1\', \'1\', \'Curry Chicken\', \'null\', \'Delicious Japanese curry chicken with rice\', \'13.99\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `menuitems` (`id`, `restaurant_id`, `category_id`, `name`, `picture_link`, `detail`, `price`) VALUES (:id:, :restaurant_id:, :category_id:, :name:, :picture_link:, :detail:, :price:)', [...], false)
+ 5 APPPATH/Controllers/TestController.php(26): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestController->testDatabaseConnection()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/macbookpro/Eatnow/public/index.php')
+CRITICAL - 2024-04-30 15:08:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/admin.php"
+[Method: GET, Route: admin]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AdminController.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-04-30 15:08:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/admin.php"
+[Method: GET, Route: admin/]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AdminController.php(29): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
