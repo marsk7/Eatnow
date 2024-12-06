@@ -1,0 +1,71 @@
+version: '3.8'
+
+networks:
+  eatnow-network:
+    driver: bridge
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
+    container_name: eatnow-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Marsk
+      MYSQL_DATABASE: eatnow
+      MYSQL_USER: eatnow
+      MYSQL_PASSWORD: Marsk
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"] 
+      interval: 30s 
+      timeout: 10s 
+      retries: 10
+    networks:
+      - eatnow-network
+
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: eatnow-php
+    volumes:
+      - .:/var/www/html  
+    networks:
+      - eatnow-network
+
+  phpmyadmin:
+    build:
+      context: .
+      dockerfile: ./docker/phpmyadmin/Dockerfile
+    container_name: eatnow-phpmyadmin
+    environment:
+      PMA_HOST: eatnow-db
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - eatnow-network
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    container_name: eatnow-nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - php
+    networks:
+      - eatnow-network
+
+volumes:
+  db_data:
+
