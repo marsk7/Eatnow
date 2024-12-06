@@ -4,8 +4,7 @@
 [![License](https://img.shields.io/github/license/marsk7/eatnow)](LICENSE)  
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/marsk7/eatnow/releases)  
 [![GitHub stars](https://img.shields.io/github/stars/marsk7/eatnow)](https://github.com/marsk7/eatnow/stargazers)  
-[Live Demo](http://et-now.com/) | [Documentation](#)
-
+<!-- [Live Demo](http://et-now.com/) | [Documentation](#) -->
 ---
 
 ## 📌 **Project Overview**
@@ -63,9 +62,11 @@ docker-compose up -d
 
 - **Frontend**: `http://localhost`  
 - **Admin Panel**: `http://localhost/admin`  
+  <!--
   - Default Admin Credentials:  
     - **Username**: `admin`  
     - **Password**: `password123`
+    -->
 
 ---
 
@@ -73,13 +74,18 @@ docker-compose up -d
 
 ```plaintext
 eatnow/
-├── application/        # CodeIgniter application files
-│   ├── controllers/    # MVC controllers
-│   ├── models/         # Business logic
-│   └── views/          # Frontend templates
-├── assets/             # Static files (CSS, JS, images)
+├── app/                # CodeIgniter application files
+│   ├── Controllers/    # MVC controllers
+│   ├── Models/         # Business logic
+│   └── Views/          # Frontend templates
+├── docker/             # docker config files
+│   ├── mysql/          # MySQL Dockerfile
+│   ├── nginx/          # NginX Dockerfile
+│   ├── php/            # PHP Dockerfile
+│   └── phpmyadmin/     # phpMyAdmin Dockerfile
+├── public/             # Static files (images)
 ├── writable/           # Logs and sessions
-├── database/           # SQL scripts for database initialization
+├── backup.sql/         # SQL scripts for database initialization
 ├── docker-compose.yml  # Docker Compose configuration
 └── README.md           # Project documentation
 ```
