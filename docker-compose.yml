@@ -66,6 +66,8 @@ services:
       - php
     networks:
       - eatnow-network
+    volumes:
+      - .:/var/www/html:ro
 
 volumes:
   db_data:
