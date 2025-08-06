@@ -186,7 +186,7 @@ class AdminController extends BaseController
         $messages = $this->request->getJSON(true);
 
         $client = new Client();
-        $apiKey = getenv('OPENAI_API_KEY');
+        $apiKey = env('OPENAI_API_KEY');
 	$model = 'gpt-4o';
 	// $model = 'gpt-3.5-turbo';
         // $model = 'gpt-4';
