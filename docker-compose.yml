@@ -42,6 +42,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/phpmyadmin/Dockerfile
+    platform: linux/amd64
     container_name: eatnow-phpmyadmin
     environment:
       PMA_HOST: eatnow-db
