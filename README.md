@@ -51,6 +51,10 @@
 git clone https://github.com/marsk7/eatnow.git
 cd eatnow
 ```
+To enable chatbot function, generate OpenAI APIKEY and add it at the end of .env file
+```bash
+OPENAI_API_KEY=sk-xxxx...
+```
 
 ### **3. Build and Run**
 
