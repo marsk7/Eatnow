@@ -64,8 +64,8 @@ docker-compose up -d
 
 ### **4. Access Application**
 
-- **Frontend**: `http://localhost`  
-- **Admin Panel**: `http://localhost/admin`  
+- **Frontend**: http://localhost
+- **Admin Panel**: http://localhost/admin
   <!--
   - Default Admin Credentials:  
     - **Username**: `admin`  
