@@ -20,9 +20,12 @@ class App extends BaseConfig
 
     public function __construct()
     {
-	parent::__construct();
-	if (isset($_SERVER['HTTP_HOST'])) {
-		$this->baseURL = 'https://' . $_SERVER['HTTP_HOST'] . '/'; }
+        parent::__construct();
+
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $scheme = (!empty($_SERVER['HTTPS']) || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
+            $this->baseURL = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/';
+        }
     }
 
 
