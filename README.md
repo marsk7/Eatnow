@@ -1,4 +1,5 @@
 # **EatNow** 🍴  
+[English](README.md) | [中文](README.zh.md)
 > **A QR-based ordering system for a seamless dining experience.**
 
 [![License](https://img.shields.io/github/license/marsk7/eatnow)](LICENSE)  
@@ -142,7 +143,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 🌟 **Acknowledgements**
 
 - Inspired by the need for efficient restaurant management.
-- Special thanks to all contributors and testers.
+- Special thanks to Mado Restaurant Brisbane.
 
 ---
 
